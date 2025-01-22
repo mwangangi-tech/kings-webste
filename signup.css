@@ -1,0 +1,108 @@
+/* Full-page setup with animation */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    background: linear-gradient(120deg, #84fab0, #8fd3f4); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: gradientAnimation 5s infinite alternate;
+}
+
+/* Container for the signup form */
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: scaleIn 0.5s ease-out;
+}
+
+/* Form Title */
+.signup-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Fields */
+.input-box {
+    position: relative;
+    margin: 15px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #84fab0;
+    box-shadow: 0px 0px 8px rgba(132, 250, 176, 0.5);
+    outline: none;
+}
+
+/* Submit Button */
+.signup-button {
+    width: 100%;
+    padding: 12px;
+    background: #84fab0;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.signup-button:hover {
+    background: #72e6a1;
+    transform: scale(1.05);
+}
+
+/* Subtle animations for the form and background */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gradientAnimation {
+    from {
+        background: linear-gradient(120deg, #84fab0, #8fd3f4);
+    }
+    to {
+        background: linear-gradient(120deg, #8fd3f4, #84fab0);
+    }
+}
+
+/* Link Styles */
+.signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.signup-link a {
+    color: #84fab0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
